@@ -3,34 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla Refugio Animales</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-        }
-    </style>
+    <title>Plantilla Refugio Animales - Inicio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>¡Hola! Esta es la plantilla para refugios de animales.</h1>
-        <p>Tu GitHub Page está funcionando. ¡Ahora puedes empezar a construir tu sitio!</p>
-    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Refugio Amigo Animal</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="adopcion.html">Animales en Adopción</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="como-ayudar.html">Cómo Ayudar</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="como-usar-plantilla.html">Usar Plantilla</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1>¡Un hogar para cada corazón que late!</h1>
+                <p>Ayúdanos a encontrar familias amorosas para nuestros amigos peludos.</p>
+                <a href="adopcion.html" class="btn-primary">Ver Animales en Adopción</a>
+            </div>
+        </section>
+
+        <section id="featured-animals" class="featured-section">
+            <div class="container">
+                <h2>Nuestros Animales Destacados</h2>
+                <div class="animal-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="about-us-preview" class="info-section">
+            <div class="container">
+                <h2>¿Quiénes Somos?</h2>
+                <p>Somos un equipo de voluntarios dedicados a rescatar y rehabilitar animales abandonados, ofreciéndoles una segunda oportunidad. Creemos que cada animal merece amor y un hogar seguro.</p>
+                <a href="quienes-somos.html" class="btn-secondary">Conoce más sobre nosotros</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Refugio Amigo Animal. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">BlueSky</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

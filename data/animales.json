@@ -1,0 +1,42 @@
+[
+  {
+    "id": "fido-1",
+    "name": "Fido",
+    "type": "Perro",
+    "age": "2 años",
+    "breed": "Labrador Retreiver",
+    "description": "Fido es un labrador muy juguetón y cariñoso, ideal para familias activas.",
+    "image": "img/animals/fido.jpg",
+    "featured": true
+  },
+  {
+    "id": "miau-2",
+    "name": "Miau",
+    "type": "Gato",
+    "age": "1 año",
+    "breed": "Siamés",
+    "description": "Miau es una gata curiosa y tranquila, le encanta tomar el sol y las caricias.",
+    "image": "img/animals/miau.jpg",
+    "featured": true
+  },
+  {
+    "id": "coco-3",
+    "name": "Coco",
+    "type": "Conejo",
+    "age": "6 meses",
+    "breed": "Mini Lop",
+    "description": "Coco es un conejito enérgico y sociable, perfecto para acompañar.",
+    "image": "img/animals/coco.jpg",
+    "featured": true
+  },
+  {
+    "id": "luna-4",
+    "name": "Luna",
+    "type": "Perro",
+    "age": "4 años",
+    "breed": "Mestizo",
+    "description": "Luna es una perra protectora y leal, busca un hogar con espacio para correr.",
+    "image": "img/animals/luna.jpg",
+    "featured": false
+  }
+]
