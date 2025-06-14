@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla Refugio Animales - Inicio</title>
+    <!-- El título de la página ahora se cargará dinámicamente desde config.json -->
+    <title id="siteTitleDynamic">Cargando...</title>
+    <!-- Enlazamos nuestro archivo CSS para los estilos de la página -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Encabezado de la página: Contiene el logo y la navegación principal -->
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html">Refugio Amigo Animal</a>
+                <!-- El texto del logo/título del sitio se cargará dinámicamente desde config.json -->
+                <a href="index.html" id="siteLogoDynamic">Cargando...</a>
             </div>
             <nav>
                 <ul>
@@ -20,13 +24,15 @@
                     <li><a href="quienes-somos.html">Quiénes Somos</a></li>
                     <li><a href="como-ayudar.html">Cómo Ayudar</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="como-usar-plantilla.html">Usar Plantilla</a></li>
+                    <!-- Eliminado: <li><a href="como-usar-plantilla.html">Usar Plantilla</a></li> -->
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Sección principal de contenido: Contiene las secciones dinámicas de la página -->
     <main>
+        <!-- Sección Hero: La primera sección visible, con un mensaje principal y un llamado a la acción -->
         <section id="hero" class="hero-section">
             <div class="container">
                 <h1>¡Un hogar para cada corazón que late!</h1>
@@ -35,33 +41,56 @@
             </div>
         </section>
 
+        <!-- Sección de Animales Destacados: Aquí se cargarán dinámicamente los animales desde 'animales.json' -->
         <section id="featured-animals" class="featured-section">
             <div class="container">
                 <h2>Nuestros Animales Destacados</h2>
-                <div class="animal-grid">
-                    </div>
+                <!-- Cuadrícula para animales destacados (solo se muestra en esta página) -->
+                <div class="animal-grid" id="featuredAnimalGrid">
+                    <!-- Las tarjetas de animales se insertarán aquí mediante JavaScript -->
+                </div>
             </div>
         </section>
 
-        <section id="about-us-preview" class="info-section">
-            <div class="container">
+        <!-- CONTENEDOR PARA LAS SECCIONES DE PREVISUALIZACIÓN CON ESTILO DE TARJETA -->
+        <div class="home-previews-grid container">
+
+            <!-- Sección de Previsualización "Quiénes Somos" -->
+            <section id="about-us-preview" class="preview-card">
                 <h2>¿Quiénes Somos?</h2>
                 <p>Somos un equipo de voluntarios dedicados a rescatar y rehabilitar animales abandonados, ofreciéndoles una segunda oportunidad. Creemos que cada animal merece amor y un hogar seguro.</p>
-                <a href="quienes-somos.html" class="btn-secondary">Conoce más sobre nosotros</a>
-            </div>
-        </section>
+                <a href="quienes-omos.html" class="btn-secondary">Conoce más sobre nosotros</a>
+            </section>
+
+            <!-- Sección de Previsualización "Cómo Ayudar" -->
+            <section id="how-to-help-preview" class="preview-card">
+                <h2>¿Cómo Puedes Ayudar?</h2>
+                <p>Tu apoyo es esencial para el bienestar de nuestros animales. Descubre las diferentes maneras en las que puedes colaborar con el refugio.</p>
+                <a href="como-ayudar.html" class="btn-secondary">Descubre Cómo Ayudar</a>
+            </section>
+
+            <!-- Previsualización "Contacto" -->
+            <section id="contact-preview" class="preview-card">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes preguntas o quieres saber más? Estamos aquí para ayudarte.</p>
+                <a href="contacto.html" class="btn-secondary">Ponte en Contacto</a>
+            </section>
+        </div> <!-- FIN home-previews-grid -->
     </main>
 
+    <!-- Pie de página: Contiene información de copyright y enlaces a redes sociales -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Refugio Amigo Animal. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <a href="#">BlueSky</a>
-                <a href="#">Instagram</a>
+            <!-- El texto del footer se cargará dinámicamente desde config.json -->
+            <p id="footerTextDynamic">Cargando...</p>
+            <!-- Los enlaces sociales se generarán aquí con JavaScript desde config.json -->
+            <div class="social-links" id="socialLinksDynamic">
+                <!-- Los enlaces se generarán aquí con JavaScript -->
             </div>
         </div>
     </footer>
 
+    <!-- Script de JavaScript: Se coloca al final del <body> para asegurar que el HTML esté cargado antes de que el script intente manipularlo -->
     <script src="js/script.js"></script>
 
 </body>

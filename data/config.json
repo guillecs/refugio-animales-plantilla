@@ -1,0 +1,178 @@
+{
+  "siteTitle": "Refugio Amigo Animal",
+  "footerText": "© 2025 Refugio Amigo Animal. Todos los derechos reservados.",
+  "socialLinks": [
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/tu_usuario",
+      "iconClass": "fab fa-instagram"
+    },
+    {
+      "name": "BlueSky",
+      "url": "https://bsky.app/profile/tu_usuario.bsky.social",
+      "iconClass": "fab fa-bluesky"
+    }
+  ],
+  "contactInfo": {
+    "email": "info@tudominio.com",
+    "telefono": "+34 123 45 67 89",
+    "direccion": "Calle Falsa 123, Ciudad, País"
+  },
+  "aboutPage": {
+    "title": "Nuestra Misión y Equipo",
+    "missionParagraphs": [
+      "En Refugio Amigo Animal, nos dedicamos con pasión a la causa de los animales desamparados. Creemos firmemente que cada ser vivo merece una segunda oportunidad, un hogar lleno de amor y el respeto que se merece.",
+      "Desde 20XX, hemos rescatado, rehabilitado y encontrado familias para cientos de perros, gatos y otras mascotas. Nuestro trabajo es posible gracias a un equipo incansable de voluntarios, veterinarios y colaboradores que dedican su tiempo y energía a esta noble labor."
+    ],
+    "valuesTitle": "Nuestros Valores",
+    "values": [
+      "<strong>Compasión:</strong> Actuamos siempre con empatía y amor hacia cada animal.",
+      "<strong>Respeto:</strong> Valoramos la vida y el bienestar de todos los seres vivos.",
+      "<strong>Integridad:</strong> Operamos con transparencia y responsabilidad en todas nuestras acciones.",
+      "<strong>Comunidad:</strong> Fomentamos la participación y el apoyo de la comunidad en la adopción y cuidado animal."
+    ],
+    "teamTitle": "Conoce a Nuestro Equipo",
+    "teamMembers": [
+      {
+        "name": "Nombre Voluntario 1",
+        "role": "Fundador y Coordinador de Adopciones.",
+        "description": "Dedicado a asegurar que cada animal encuentre el hogar perfecto.",
+        "image": "https://placehold.co/150x150/007bff/ffffff?text=Voluntario+1"
+      },
+      {
+        "name": "Nombre Voluntario 2",
+        "role": "Encargada de Bienestar Animal y Rehabilitación.",
+        "description": "Su pasión es transformar vidas.",
+        "image": "https://placehold.co/150x150/007bff/ffffff?text=Voluntario+2"
+      },
+      {
+        "name": "Nombre Voluntario 3",
+        "role": "Responsable de Eventos y Recaudación de Fondos.",
+        "description": "El motor detrás de nuestras iniciativas.",
+        "image": "https://placehold.co/150x150/007bff/ffffff?text=Voluntario+3"
+      }
+    ],
+    "callToActionText": "¿Te gustaría unirte a nuestro equipo? ¡Conoce cómo puedes ",
+    "callToActionLinkText": "ayudar",
+    "callToActionLinkUrl": "como-ayudar.html"
+  },
+  "helpPage": {
+    "title": "Formas de Ayudar",
+    "description": "Tu apoyo es fundamental para que podamos seguir rescatando, rehabilitando y encontrando hogares amorosos para nuestros animales.",
+    "sections": [
+      {
+        "id": "financial",
+        "title": "Donaciones Económicas",
+        "paragraphs": [
+          "Cada contribución económica, por pequeña que sea, nos ayuda a cubrir gastos veterinarios, alimentación y mantenimiento de nuestras instalaciones."
+        ],
+        "items": [
+          {
+            "name": "PayPal",
+            "info": "Dona de forma rápida y segura a través de PayPal.",
+            "link": "https://www.paypal.com/paypalme/turefugio"
+          },
+          {
+            "name": "Bizum",
+            "info": "Envía tu donación a nuestro número Bizum: +34 123 456 789 (Concepto: Donación Animal).",
+            "link": null
+          },
+          {
+            "name": "Transferencia Bancaria",
+            "info": "Realiza una transferencia a nuestra cuenta bancaria.",
+            "bankName": "Tu Banco",
+            "iban": "ESXX XXXX XXXX XXXX XXXX XXXX",
+            "swiftBic": "TUCÓDIGO",
+            "link": null
+          }
+        ]
+      },
+      {
+        "id": "materials",
+        "title": "Donación de Materiales y Suministros",
+        "paragraphs": [
+          "Siempre necesitamos una variedad de artículos para el cuidado diario de nuestros animales. Cualquier donación de materiales es bienvenida y muy apreciada."
+        ],
+        "items": [
+          { "name": "Comida para perros y gatos" },
+          { "name": "Mantas y toallas" },
+          { "name": "Juguetes para mascotas" },
+          { "name": "Medicamentos veterinarios (consultar)" },
+          { "name": "Arena para gatos" }
+        ],
+        "infoText": "Puedes traer tus donaciones a nuestro refugio de Lunes a Viernes, de 10:00 a 14:00 y de 16:00 a 19:00."
+      },
+      {
+        "id": "volunteer",
+        "title": "Hazte Voluntario",
+        "paragraphs": [
+          "Si tienes tiempo y ganas de ayudar, ¡te necesitamos! Nuestros voluntarios son el corazón del refugio.",
+          "Hay muchas formas de colaborar: pasear perros, limpiar instalaciones, socializar gatos, ayudar en eventos y más."
+        ],
+        "items": [
+          { "name": "Paseos y socialización de animales" },
+          { "name": "Mantenimiento de instalaciones" },
+          { "name": "Apoyo en eventos de adopción" },
+          { "name": "Tareas administrativas" }
+        ],
+        "infoText": "Interesados, por favor, <a href='contacto.html'>contáctanos</a> para más información sobre cómo unirte a nuestro equipo."
+      }
+    ]
+  },
+  "contactPage": {
+    "title": "Contáctanos",
+    "description": "Estamos aquí para responder a tus preguntas y ayudarte. No dudes en ponerte en contacto con nosotros a través de los siguientes medios:",
+    "email": "contacto@tudominio.com",
+    "phone": "+34 987 654 321",
+    "address": "Calle del Refugio, 10, 28001 Madrid, España",
+    "hours": "Lunes a Viernes: 09:00 - 18:00 | Sábados: 10:00 - 14:00 | Domingos: Cerrado"
+  },
+  "defaultTheme": "Tierra Cálida",
+  "colorThemes": [
+    {
+      "name": "Default",
+      "primary": "#007bff",
+      "secondary": "#6c757d",
+      "accent": "#28a745",
+      "lightBg": "#f8f9fa",
+      "whiteBg": "#ffffff",
+      "darkText": "#343a40",
+      "lightText": "#ffffff",
+      "borderColor": "#dee2e6"
+    },
+    {
+      "name": "Tierra Cálida",
+      "primary": "#8B4513",
+      "secondary": "#A0522D",
+      "accent": "#CD853F",
+      "lightBg": "#FFF8DC",
+      "whiteBg": "#FDF5E6",
+      "darkText": "#5A2D0D",
+      "lightText": "#ffffff",
+      "borderColor": "#D2B48C"
+    },
+    {
+      "name": "Océano Vivo",
+      "primary": "#008080",
+      "secondary": "#4682B4",
+      "accent": "#FFA500",
+      "lightBg": "#E0FFFF",
+      "whiteBg": "#F0FFFF",
+      "darkText": "#004040",
+      "lightText": "#ffffff",
+      "borderColor": "#AFEEEE"
+    },
+    {
+      "name": "Alto Contraste Oscuro",
+      "primary": "#4CAF50",
+      "secondary": "#BBBBBB",
+      "accent": "#FFD700",
+      "lightBg": "#212121",
+      "whiteBg": "#303030",
+      "darkText": "#FFFFFF",
+      "lightText": "#FFFFFF",
+      "borderColor": "#424242"
+    }
+  ],
+  "appsScriptAnimalsUrl": "TU_URL_DE_APPS_SCRIPT_ANIMALES"
+}

@@ -2,41 +2,56 @@
   {
     "id": "fido-1",
     "name": "Fido",
-    "type": "Perro",
-    "age": "2 años",
-    "breed": "Labrador Retreiver",
-    "description": "Fido es un labrador muy juguetón y cariñoso, ideal para familias activas.",
+    "species": "Perro",
+    "breed": "Labrador Retriever",
+    "age": 2,
+    "description": "Fido es un labrador muy juguetón y cariñoso, ideal para familias activas que disfruten de los paseos al aire libre.",
     "image": "img/animales/fido.jpg",
-    "featured": true
+    "featured": true,
+    "isAdopted": false
   },
   {
     "id": "miau-2",
     "name": "Miau",
-    "type": "Gato",
-    "age": "1 año",
+    "species": "Gato",
     "breed": "Siamés",
-    "description": "Miau es una gata curiosa y tranquila, le encanta tomar el sol y las caricias.",
+    "age": 1,
+    "description": "Miau es una gata curiosa y tranquila, le encanta tomar el sol y recibir caricias suaves en las tardes.",
     "image": "img/animales/miau.jpg",
-    "featured": false
+    "featured": true,
+    "isAdopted": false
   },
   {
     "id": "coco-3",
     "name": "Coco",
-    "type": "Conejo",
-    "age": "6 meses",
+    "species": "Conejo",
     "breed": "Mini Lop",
-    "description": "Coco es un conejito enérgico y sociable, perfecto para acompañar.",
+    "age": 0.5,
+    "description": "Coco es un conejito enérgico y sociable, perfecto para acompañar. Requiere espacio para sus saltos.",
     "image": "img/animales/coco.jpg",
-    "featured": false
+    "featured": true,
+    "isAdopted": false
   },
   {
     "id": "luna-4",
     "name": "Luna",
-    "type": "Perro",
-    "age": "4 años",
-    "breed": "Mestizo",
-    "description": "Luna es una perra protectora y leal, busca un hogar con espacio para correr.",
+    "species": "Perro",
+    "breed": "Mestizo Pastor",
+    "age": 4,
+    "description": "Luna es una perra protectora y leal, busca un hogar con espacio para correr y jugar a la pelota.",
     "image": "img/animales/luna.jpg",
-    "featured": false
+    "featured": false,
+    "isAdopted": true
+  },
+  {
+    "id": "pipo-5",
+    "name": "Pipo",
+    "species": "Pájaro",
+    "breed": "Periquito",
+    "age": 0.8,
+    "description": "Pipo es un periquito muy hablador y colorido, ideal para quienes buscan un compañero con plumas.",
+    "image": "img/animales/pipo.jpg",
+    "featured": false,
+    "isAdopted": false
   }
 ]

@@ -1,0 +1,575 @@
+/* --- Variables CSS Globales --- */
+:root {
+    --primary-color: #007bff; /* Azul vibrante para elementos principales */
+    --secondary-color: #6c757d; /* Gris para elementos secundarios */
+    --accent-color: #28a745; /* Verde para acciones positivas (ej. adopción) */
+    --light-bg: #f8f9fa; /* Fondo claro general */
+    --white-bg: #ffffff; /* Fondo blanco específico */
+    --dark-text: #343a40; /* Color de texto oscuro */
+    --light-text: #ffffff; /* Color de texto claro */
+    --border-color: #dee2e6; /* Color para bordes y líneas */
+    --font-family: 'Inter', sans-serif; /* Fuente principal (se asume que Inter está disponible o se importará) */
+    --spacing-unit: 16px; /* Unidad base para márgenes y paddings */
+}
+
+/* --- Estilos Globales y Reset Básico --- */
+* {
+    box-sizing: border-box; /* Incluye padding y border en el ancho/alto del elemento */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% del alto de la ventana */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna para el footer pegado abajo */
+}
+
+/* Contenedor central para el contenido principal, limita el ancho y centra */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0 var(--spacing-unit); /* Padding lateral para que el contenido no toque los bordes */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible hasta el max-width */
+}
+
+/* Estilos para enlaces generales */
+a {
+    color: var(--primary-color);
+    text-decoration: none; /* Quita el subrayado por defecto */
+}
+
+a:hover {
+    text-decoration: underline; /* Añade subrayado al pasar el ratón */
+}
+
+/* Estilos para títulos h1, h2, etc. */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: calc(var(--spacing-unit) / 2);
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: var(--spacing-unit);
+}
+
+/* Estilo para las descripciones de las secciones (ej. en Adopción) */
+.section-description {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto calc(var(--spacing-unit) * 2); /* Centra y añade margen inferior */
+    color: var(--dark-text);
+}
+
+
+/* --- Botones --- */
+.btn-primary, .btn-secondary {
+    display: inline-block; /* Permite aplicar padding y márgenes como un bloque */
+    padding: var(--spacing-unit) calc(var(--spacing-unit) * 1.5);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
+    white-space: nowrap; /* Evita que el texto del botón se rompa en varias líneas */
+    margin: calc(var(--spacing-unit) / 2); /* Pequeño margen para botones en línea */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color); /* CAMBIO: Usa secondary-color del tema */
+    border-color: var(--secondary-color); /* CAMBIO: Borde coincide con el nuevo fondo */
+    color: var(--light-text); /* Asegura que el texto siga siendo claro */
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+/* Estilo para botones más pequeños, usados en listas o ítems específicos */
+.small-btn {
+    padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
+    font-size: 0.9em;
+    margin: 5px; /* Ajuste el margen para botones pequeños */
+}
+
+
+/* --- Encabezado (Header) --- */
+header {
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    padding: calc(var(--spacing-unit) / 4) 0; /* REDUCIDO: Menos padding vertical */
+    border-bottom: 3px solid var(--primary-color); /* Línea de color distintiva */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre logo y nav */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.logo a {
+    color: var(--light-text);
+    font-size: 1.5em; /* REDUCIDO: Tamaño de fuente del logo */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex;
+    flex-wrap: wrap; /* Para que los ítems de navegación se envuelvan en móviles */
+    justify-content: center; /* Centra los ítems en móviles si se envuelven */
+}
+
+nav ul li {
+    margin-left: var(--spacing-unit);
+}
+
+nav ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+    padding: calc(var(--spacing-unit) / 4) 0; /* Un poco de padding vertical */
+    display: block; /* Para que el área clickable sea mayor */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color); /* Cambia de color al pasar el ratón */
+    text-decoration: none;
+}
+
+/* --- Sección Hero (Actualizado con color sólido) --- */
+.hero-section {
+    background-color: var(--primary-color); /* Fondo de color sólido usando la variable primaria */
+    color: var(--light-text);
+    text-align: center;
+    padding: calc(var(--spacing-unit) * 3) 0; /* REDUCIDO: Padding vertical del hero */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px; /* REDUCIDO: Altura mínima para la sección */
+    flex-direction: column;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    margin-bottom: calc(var(--spacing-unit) / 2);
+    color: var(--light-text);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Secciones de Contenido General (main section y info-section) --- */
+main section {
+    padding: calc(var(--spacing-unit) * 3) 0; /* Padding por defecto para secciones principales */
+}
+
+/* Base para secciones generales con fondo claro */
+.featured-section, .adopcion-section {
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+/* Base para secciones de información/contenido */
+.info-section {
+    background-color: var(--white-bg); /* Fondo blanco para las secciones de info */
+    text-align: center; /* Texto centrado por defecto en estas secciones */
+    padding: calc(var(--spacing-unit) * 3) 0; /* Padding vertical similar a otras secciones */
+}
+
+
+.info-section h2 {
+    margin-top: var(--spacing-unit) * 2; /* Margen superior para los sub-títulos */
+    margin-bottom: var(--spacing-unit);
+}
+
+.info-section p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--spacing-unit) * 2;
+    text-align: left; /* Alinea los párrafos a la izquierda dentro del contenedor */
+}
+
+.info-section ul {
+    max-width: 800px;
+    margin: 0 auto calc(var(--spacing-unit) * 2); /* Centra la lista y añade margen inferior */
+    list-style-type: disc; /* Puntos de lista */
+    padding-left: var(--spacing-unit) * 2; /* Indentación para los puntos */
+    text-align: left;
+}
+
+.info-section ul li {
+    margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+/* Estilo para el texto en negrita dentro de las listas de valores */
+.info-section ul li strong {
+    font-weight: bold; /* Asegura que el texto dentro de <strong> sea negrita */
+    color: var(--primary-color); /* Opcional: darle un color diferente a la parte en negrita */
+}
+
+
+/* --- Cuadrícula de Animales Destacados y de Adopción --- */
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: var(--spacing-unit); /* Espacio entre las tarjetas */
+    margin-top: calc(var(--spacing-unit) * 2);
+    justify-content: center; /* Centra las tarjetas si no llenan la fila completa */
+}
+
+.animal-card {
+    background-color: var(--white-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegura que las esquinas redondeadas de la imagen se respeten */
+    text-align: left;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.animal-card:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+}
+
+.animal-card img {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes de tarjeta */
+    object-fit: cover; /* Recorta la imagen para que cubra el espacio sin distorsionarse */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.animal-card h3 {
+    margin: var(--spacing-unit) var(--spacing-unit) calc(var(--spacing-unit) / 2);
+    color: var(--dark-text);
+    font-size: 1.5em;
+}
+
+.animal-card p {
+    margin: 0 var(--spacing-unit) var(--spacing-unit);
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio restante */
+}
+
+.animal-card .btn-secondary {
+    align-self: flex-start; /* Alinea el botón a la izquierda dentro de la tarjeta */
+    margin: 0 var(--spacing-unit) var(--spacing-unit);
+}
+
+/* --- Cuadrícula y Tarjetas del Equipo --- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas para el equipo */
+    gap: calc(var(--spacing-unit) * 2); /* Más espacio entre miembros del equipo */
+    margin-top: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    justify-content: center;
+    padding: 0 var(--spacing-unit);
+}
+
+.team-member-card {
+    background-color: var(--white-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-unit);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-member-card img {
+    width: 120px; /* Tamaño de la imagen del miembro del equipo */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 3px solid var(--primary-color);
+    margin-bottom: var(--spacing-unit);
+}
+
+.team-member-card h3 {
+    color: var(--dark-text);
+    margin-bottom: calc(var(--spacing-unit) / 4);
+    font-size: 1.3em;
+}
+
+.team-member-card p.role { /* Estilo específico para el rol */
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+.team-member-card p {
+    font-size: 0.9em;
+    color: var(--dark-text);
+    flex-grow: 1; /* Para que el texto de descripción ocupe el espacio y empuje el botón */
+}
+
+/* --- Secciones de Ayuda --- */
+#helpSectionsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columnas responsivas */
+    gap: calc(var(--spacing-unit) * 2); /* Espacio entre las tarjetas de sección */
+    margin-top: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    padding: 0 var(--spacing-unit); /* Padding lateral para que las tarjetas no toquen los bordes */
+}
+
+.help-section-card {
+    background-color: var(--white-bg);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra un poco más pronunciada */
+    padding: calc(var(--spacing-unit) * 1.5);
+    text-align: left; /* Alinea el texto a la izquierda dentro de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--primary-color); /* Línea superior de color */
+}
+
+.help-section-card:hover {
+    transform: translateY(-8px); /* Efecto de elevación al pasar el ratón */
+}
+
+.help-section-card h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-unit);
+    font-size: 1.8em;
+    text-align: center; /* Centra el título de la tarjeta */
+}
+
+.help-section-card p {
+    font-size: 1em;
+    margin-bottom: var(--spacing-unit);
+    color: var(--dark-text);
+}
+
+.help-section-card ul.help-item-list {
+    list-style-type: none; /* Quita los puntos de lista por defecto */
+    padding-left: 0;
+    margin-bottom: var(--spacing-unit);
+    flex-grow: 1; /* Permite que la lista crezca y empuje el contenido hacia abajo */
+}
+
+.help-section-card ul.help-item-list li {
+    margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+/* Estilos específicos para ítems de lista con botones (ej. PayPal) */
+.help-section-card ul.help-item-list li a.btn-secondary {
+    display: inline-block; /* Asegura que el botón se comporte como un elemento de bloque inline */
+    margin-right: 10px; /* Espacio a la derecha del botón si hay texto al lado */
+    vertical-align: middle; /* Alineación vertical para el botón y el texto si están en la misma línea */
+}
+
+/* Estilo para el texto fuerte dentro de los ítems de lista de ayuda (Banco, IBAN) */
+.help-section-card ul.help-item-list li strong {
+    color: var(--primary-color); /* Color para los títulos de ítems (ej. Banco:, IBAN:) */
+    display: block; /* Esto hace que el strong tome su propia línea */
+    margin-bottom: 5px; /* Espacio debajo del strong */
+    font-size: 1.05em; /* Un poco más grande para resaltar */
+}
+
+/* Ajuste para que el infoSpan siga al botón en la misma línea si es posible */
+.help-section-card ul.help-item-list li span {
+    display: inline; /* Asegura que el span de info siga al botón */
+}
+
+/* --- Sección de Contacto: Cuadrícula y Tarjetas --- */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: calc(var(--spacing-unit) * 2); /* Espacio entre las tarjetas de contacto */
+    margin-top: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    padding: 0 var(--spacing-unit);
+    justify-content: center;
+}
+
+.contact-detail-card {
+    background-color: var(--white-bg);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra consistente con ayuda */
+    padding: calc(var(--spacing-unit) * 1.5);
+    text-align: center; /* Centra el contenido dentro de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente los elementos internos */
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--secondary-color); /* Línea de color diferente para contraste */
+}
+
+.contact-detail-card:hover {
+    transform: translateY(-8px); /* Efecto de elevación al pasar el ratón */
+}
+
+.contact-detail-card h3 {
+    color: var(--dark-text); /* Color más oscuro para el título del detalle */
+    margin-bottom: calc(var(--spacing-unit) / 2);
+    font-size: 1.5em;
+}
+
+.contact-detail-card p {
+    flex-grow: 1; /* Permite que el párrafo crezca para empujar los botones */
+    margin-bottom: var(--spacing-unit);
+    color: var(--secondary-color); /* Texto más suave para la información */
+    font-size: 1.1em;
+}
+
+.contact-detail-card .btn-secondary {
+    margin-top: auto; /* Empuja el botón hacia abajo en la tarjeta */
+    align-self: center; /* Centra el botón en la tarjeta */
+}
+
+/* --- Estilos para las tarjetas de previsualización en la página de inicio --- */
+.home-previews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columnas responsivas */
+    gap: calc(var(--spacing-unit) * 2); /* Espacio entre las tarjetas */
+    margin-top: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    padding: 0 var(--spacing-unit); /* Padding lateral para que las tarjetas no toquen los bordes */
+    text-align: center; /* Centra las tarjetas si no llenan toda la fila */
+}
+
+.preview-card {
+    background-color: var(--white-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: calc(var(--spacing-unit) * 1.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--primary-color); /* Línea de color para un toque visual */
+}
+
+.preview-card:hover {
+    transform: translateY(-5px); /* Pequeño efecto de elevación al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el ratón */
+}
+
+.preview-card h2 {
+    font-size: 1.8em;
+    margin-bottom: var(--spacing-unit);
+    color: var(--primary-color);
+}
+
+.preview-card p {
+    flex-grow: 1; /* Permite que el párrafo empuje el botón hacia abajo */
+    margin-bottom: var(--spacing-unit);
+    font-size: 1em;
+}
+
+.preview-card .btn-secondary {
+    margin-top: auto; /* Empuja el botón a la parte inferior de la tarjeta */
+}
+
+
+/* --- Pie de Página (Footer) --- */
+footer {
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    padding: var(--spacing-unit) 0;
+    text-align: center;
+    margin-top: auto; /* Empuja el footer a la parte inferior de la página */
+    border-top: 3px solid var(--primary-color);
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    margin-top: calc(var(--spacing-unit) / 2);
+}
+
+.social-links a {
+    color: var(--primary-color);
+    margin: 0 calc(var(--spacing-unit) / 2);
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- Media Queries para Responsividad (Ajustes para diferentes tamaños de pantalla) --- */
+
+/* Para tablets y pantallas un poco más grandes */
+@media (min-width: 768px) {
+    header .container {
+        flex-wrap: nowrap; /* Evita que el logo y nav se envuelvan */
+    }
+
+    nav ul {
+        justify-content: flex-end; /* Alinea los ítems de nav a la derecha */
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles) */
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2.5em; /* Reduce el tamaño del título principal */
+    }
+
+    .hero-section p {
+        font-size: 1em; /* Reduce el tamaño del párrafo del hero */
+    }
+
+    header .container {
+        flex-direction: column; /* Coloca logo y nav uno debajo del otro */
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: var(--spacing-unit);
+        flex-direction: column; /* Coloca los ítems de nav en columna */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: calc(var(--spacing-unit) / 2) 0; /* Espacio vertical entre ítems de nav */
+    }
+
+    .team-grid, #helpSectionsContainer, .contact-info-grid, .home-previews-grid { /* También la cuadrícula de contacto y home-previews */
+        grid-template-columns: 1fr; /* Una sola columna en móviles para todas las cuadrículas */
+    }
+}

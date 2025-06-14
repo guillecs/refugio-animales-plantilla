@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El título de la página se cargará dinámicamente desde config.json -->
+    <title id="siteTitleDynamic">Cargando...</title>
+    <!-- Enlazamos nuestro archivo CSS para los estilos de la página -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Encabezado de la página: Contiene el logo y la navegación principal -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- El texto del logo/título del sitio se cargará dinámicamente desde config.json -->
+                <a href="index.html" id="siteLogoDynamic">Cargando...</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="adopcion.html">Animales en Adopción</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="como-ayudar.html">Cómo Ayudar</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal de contenido para la página "Cómo Ayudar" -->
+    <main>
+        <section id="help-page" class="info-section">
+            <div class="container">
+                <!-- Título principal de la sección "Cómo Ayudar" -->
+                <h1 id="helpTitleDynamic">Cargando...</h1>
+                <p class="section-description" id="helpDescriptionDynamic">Cargando...</p>
+
+                <!-- Contenedor donde se insertarán las diferentes secciones de ayuda (económicas, materiales, voluntariado) -->
+                <div id="helpSectionsContainer">
+                    <!-- Las secciones (donaciones económicas, materiales, voluntariado) se insertarán aquí mediante JavaScript -->
+                    <!-- Por ejemplo:
+                    <div class="help-section-card">
+                        <h2>Donaciones Económicas</h2>
+                        <p>...</p>
+                        <ul class="help-item-list">
+                            <li><strong>PayPal:</strong> ...</li>
+                        </ul>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página: Contiene información de copyright y enlaces a redes sociales -->
+    <footer>
+        <div class="container">
+            <!-- El texto del footer se cargará dinámicamente desde config.json -->
+            <p id="footerTextDynamic">Cargando...</p>
+            <!-- Los enlaces sociales se generarán aquí con JavaScript desde config.json -->
+            <div class="social-links" id="socialLinksDynamic">
+                <!-- Los enlaces se generarán aquí con JavaScript -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de JavaScript: Necesario para cargar la configuración y el contenido dinámico -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

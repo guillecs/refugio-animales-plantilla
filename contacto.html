@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El título de la página se cargará dinámicamente desde config.json -->
+    <title id="siteTitleDynamic">Cargando...</title>
+    <!-- Enlazamos nuestro archivo CSS para los estilos de la página -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Encabezado de la página: Contiene el logo y la navegación principal -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- El texto del logo/título del sitio se cargará dinámicamente desde config.json -->
+                <a href="index.html" id="siteLogoDynamic">Cargando...</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="adopcion.html">Animales en Adopción</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="como-ayudar.html">Cómo Ayudar</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal de contenido para la página "Contacto" -->
+    <main>
+        <section id="contact-page" class="info-section">
+            <div class="container">
+                <!-- Título principal de la sección de Contacto -->
+                <h1 id="contactTitleDynamic">Cargando...</h1>
+                <p class="section-description" id="contactDescriptionDynamic">Cargando...</p>
+
+                <!-- Contenedor para la información de contacto -->
+                <div class="contact-info-grid">
+                    <div class="contact-detail-card">
+                        <h3>Email</h3>
+                        <p id="contactEmailDynamic">Cargando...</p>
+                        <a href="#" id="contactEmailLink" class="btn-secondary small-btn">Enviar Email</a>
+                    </div>
+                    <div class="contact-detail-card">
+                        <h3>Teléfono</h3>
+                        <p id="contactPhoneDynamic">Cargando...</p>
+                        <a href="#" id="contactPhoneLink" class="btn-secondary small-btn">Llamar Ahora</a>
+                    </div>
+                    <div class="contact-detail-card">
+                        <h3>Dirección</h3>
+                        <p id="contactAddressDynamic">Cargando...</p>
+                        <a href="#" id="contactAddressLink" class="btn-secondary small-btn" target="_blank">Ver en Mapa</a>
+                    </div>
+                    <div class="contact-detail-card">
+                        <h3>Horario de Atención</h3>
+                        <p id="contactHoursDynamic">Cargando...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página: Contiene información de copyright y enlaces a redes sociales -->
+    <footer>
+        <div class="container">
+            <!-- El texto del footer se cargará dinámicamente desde config.json -->
+            <p id="footerTextDynamic">Cargando...</p>
+            <!-- Los enlaces sociales se generarán aquí con JavaScript desde config.json -->
+            <div class="social-links" id="socialLinksDynamic">
+                <!-- Los enlaces se generarán aquí con JavaScript -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de JavaScript: Necesario para cargar la configuración y el contenido dinámico -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
