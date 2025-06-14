@@ -86,8 +86,8 @@ p {
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color); /* CAMBIO: Usa secondary-color del tema */
-    border-color: var(--secondary-color); /* CAMBIO: Borde coincide con el nuevo fondo */
+    background-color: var(--secondary-color); /* Usa secondary-color del tema */
+    border-color: var(--secondary-color); /* Borde coincide con el nuevo fondo */
     color: var(--light-text); /* Asegura que el texto siga siendo claro */
     text-decoration: none;
 }
@@ -207,7 +207,7 @@ main section {
 
 
 .info-section h2 {
-    margin-top: var(--spacing-unit) * 2; /* Margen superior para los sub-títulos */
+    margin-top: calc(var(--spacing-unit) * 2); /* Margen superior para los sub-títulos */
     margin-bottom: var(--spacing-unit);
 }
 
@@ -215,7 +215,7 @@ main section {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: var(--spacing-unit) * 2;
+    margin-bottom: calc(var(--spacing-unit) * 2);
     text-align: left; /* Alinea los párrafos a la izquierda dentro del contenedor */
 }
 
@@ -223,7 +223,7 @@ main section {
     max-width: 800px;
     margin: 0 auto calc(var(--spacing-unit) * 2); /* Centra la lista y añade margen inferior */
     list-style-type: disc; /* Puntos de lista */
-    padding-left: var(--spacing-unit) * 2; /* Indentación para los puntos */
+    padding-left: calc(var(--spacing-unit) * 2); /* Indentación para los puntos */
     text-align: left;
 }
 
