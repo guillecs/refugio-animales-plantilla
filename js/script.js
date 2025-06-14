@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const teamTitleElement = document.getElementById('teamTitleDynamic');
     const teamMembersContainer = document.getElementById('teamMembersDynamic');
     const aboutCtaDynamic = document.getElementById('aboutCtaDynamic');
-    const aboutCtaLinkDynamic = document.getElementById('aboutCtaLinkDynamic'); // Corregido: antes había un error de asignación aquí
+    const aboutCtaLinkDynamic = document.getElementById('aboutCtaLinkDynamic');
 
     // Selectores para los elementos específicos de la página "Cómo Ayudar"
     const helpTitleDynamic = document.getElementById('helpTitleDynamic');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactAddressLink = document.getElementById('contactAddressLink');
     const contactHoursDynamic = document.getElementById('contactHoursDynamic');
 
-    // La URL de Google Apps Script para animales se cargará desde config.json
+    // Las URLs de Google Apps Script se cargarán desde config.json
 
 
     /**
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const animalCard = document.createElement('div');
         animalCard.classList.add('animal-card');
         animalCard.innerHTML = `
-            <img src="${animal.image}" alt="${animal.name}">
+            <img src="${animal.image}" alt="${animal.name}" onerror="this.onerror=null; this.src='https://placehold.co/400x300/CCCCCC/000000?text=Imagen+No+Disponible';">
             <h3>${animal.name}</h3>
             <p><strong>Especie:</strong> ${animal.species || 'N/A'}</p>
             <p><strong>Raza:</strong> ${animal.breed || 'N/A'}</p>
@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         let animalsToProcess = [];
-        let source = "local (animales.json)";
+        let source = "local (data/animales.json)"; // Actualizado el mensaje de fallback
 
         try {
             // --- Intenta cargar animales desde Google Apps Script ---
@@ -381,24 +381,24 @@ document.addEventListener('DOMContentLoaded', () => {
                         source = "Google Apps Script";
                         console.log("Animales cargados exitosamente desde Google Apps Script.");
                     } else {
-                        console.warn("Los datos de animales del Google Sheet están vacíos o no tienen el formato esperado.");
+                        console.warn("Los datos de animales del Google Sheet están vacíos o no tienen el formato esperado. Se recurrirá al fallback.");
                     }
                 } else {
-                    console.warn(`Falló la carga de animales desde Google Sheet (Estado: ${sheetResponse.status}).`);
+                    console.warn(`Falló la carga de animales desde Google Sheet (Estado: ${sheetResponse.status}). Se recurrirá al fallback.`);
                 }
             } else {
-                console.log("URL de Google Apps Script para animales no configurada o es la de ejemplo. Se usará la configuración local.");
+                console.log("URL de Google Apps Script para animales no configurada o es la de ejemplo. Se usará la configuración local como fallback.");
             }
 
             // Si la carga desde Apps Script falló o no dio resultados, recurre a animales.json local
             if (animalsToProcess.length === 0) {
-                console.log("Cargando animales desde animales.json local como fallback.");
+                console.log("Cargando animales desde data/animales.json local como fallback.");
                 const localResponse = await fetch('data/animales.json');
                 if (!localResponse.ok) {
-                    throw new Error(`HTTP error! status: ${localResponse.status} al cargar animales.json`);
+                    throw new Error(`HTTP error! status: ${localResponse.status} al cargar data/animales.json`);
                 }
                 animalsToProcess = await localResponse.json();
-                source = "local (animales.json)";
+                source = "local (data/animales.json)";
             }
 
             // Filtrar animales que NO están adoptados (se aplica a datos de Apps Script o locales)
